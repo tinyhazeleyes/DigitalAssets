@@ -110,7 +110,6 @@ if (in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', ge
 	if (!empty($digital_assets_binance_key_encrypted) && !empty($digital_assets_binance_secret_encrypted) ) {
 	    $decrypted_api_key = Crypto::decrypt($digital_assets_binance_key_encrypted, $site_key);	
 	    $decrypted_api_secret = Crypto::decrypt($digital_assets_binance_secret_encrypted, $site_key);
-	    print("working");	
     	}
 
 	$api = new Binance\API($decrypted_api_key,$decrypted_api_secret);
