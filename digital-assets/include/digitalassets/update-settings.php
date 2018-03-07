@@ -234,7 +234,7 @@ if ( 'update' == $action ) {
 					    	$site_key_encoded = get_option('digital_assets_site_key_encoded');
 	$site_key = digital_assets::get_site_key( $site_key_encoded );
 						$encrypted_api_key  = Crypto::encrypt($form_api_key, $site_key);
-						update_option('ldigital_assets_binance_key_encrypted', $encrypted_api_key);
+						update_option('digital_assets_binance_key_encrypted', $encrypted_api_key);
 						update_option('digital_assets_binance_key', $encrypted_api_key);
 					}
 				}
